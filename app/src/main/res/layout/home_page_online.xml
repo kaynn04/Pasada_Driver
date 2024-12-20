@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePageOnline">
+
+    <!--    Main Content-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <RelativeLayout
+            android:id="@+id/home_red"
+            android:layout_width="match_parent"
+            android:layout_height="154dp"
+            android:background="@drawable/home_header_background">
+
+            <!--        Burger Icon-->
+            <ImageButton
+                android:id="@+id/burger_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="Menu"
+                android:src="@drawable/ic_burger_menu"/>
+
+            <!--        Home Text-->
+
+            <!-- Square Button with Rounded Corners and Toggle Circle -->
+            <TextView
+                android:id="@+id/home_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:text="Online"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/toggle_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="20dp"
+                android:track="@drawable/bg_track"
+                android:thumb="@drawable/ic_thumb"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:checked="true"
+                tools:ignore="UseSwitchCompatOrMaterialXml">
+            </Switch>
+
+
+        </RelativeLayout>
+
+        <!--    Greeter Section-->
+        <RelativeLayout
+            android:id="@+id/greeting_section"
+            android:layout_width="314dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/white_rectangle"
+            android:elevation="10dp">
+
+            <ImageView
+                android:id="@+id/image_driver"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/img_driver"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                />
+            <!--        Good Morning, Afternoon, Evening-->
+            <LinearLayout
+                android:layout_toEndOf="@id/image_driver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="55dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/earned_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="P200"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/earned_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Earned"
+                    android:textStyle="normal"
+                    android:textSize="15sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--Map Fragment-->
+        <RelativeLayout
+            android:id="@+id/map_holder"
+            android:layout_width="match_parent"
+            android:layout_height="610dp"
+            android:layout_marginTop="120dp">
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/view_all"
+            android:layout_width="98dp"
+            android:layout_height="33dp"
+            android:layout_below="@id/greeting_section"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/view_background"
+            android:text="View All"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck"
+            android:textColor="#FFFFFF"/>
+
+        <!--        Bookings-->
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="275dp"
+            android:layout_marginTop="360dp"
+            android:background="@drawable/bookings_background"
+            android:orientation="vertical"
+            android:padding="1dp"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:background="#D9D9D9">
+
+                <ImageView
+                    android:id="@+id/image_customer"
+                    android:layout_width="80dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/img_customer"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_toEndOf="@id/image_customer"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kyan Oclares"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="P50.00"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+                    </FrameLayout>
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/map"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:context="com.example.XYZ.googlemaps.MapsActivity"
+                        tools:layout="@android:layout/simple_gallery_item" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pick Up"
+                android:textColor="#000000"
+                android:paddingStart="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bukluran Court"
+                android:paddingStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <!--    Divider for drop off-->
+            <View
+                android:id="@+id/divider_line_dropoff"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#D9D9D9"
+                android:layout_marginTop="10dp"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drop Off"
+                android:textColor="#000000"
+                android:paddingStart="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bukluran Court"
+                android:paddingStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <!--    Divider for drop off-->
+            <View
+                android:id="@+id/divider_line_dropoff"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#D9D9D9"
+                android:layout_marginTop="10dp"
+                tools:ignore="DuplicateIds" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="190dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/red_stroke_white_bg"
+                android:text="View"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--    Sidebar Menu-->
+    <!-- Sidebar Menu -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PASADA"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:paddingBottom="20dp" />
+
+            <!-- Menu Items -->
+            <TextView
+                android:id="@+id/user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="18sp"
+                android:paddingVertical="8dp" />
+
+            <TextView
+                android:id="@+id/saved_places"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saved Places"
+                android:textSize="18sp"
+                android:paddingVertical="8dp" />
+
+            <TextView
+                android:id="@+id/metric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Metric"
+                android:textSize="18sp"
+                android:paddingVertical="8dp" />
+
+            <TextView
+                android:id="@+id/history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="History"
+                android:textSize="18sp"
+                android:paddingVertical="8dp" />
+
+            <TextView
+                android:id="@+id/settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="18sp"
+                android:paddingVertical="8dp" />
+
+            <TextView
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log Out"
+                android:textSize="18sp"
+                android:paddingVertical="8dp" />
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

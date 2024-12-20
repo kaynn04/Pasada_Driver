@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="divider_line_item" type="id">divider_line_item</item>
+    <item name="item" type="id">item</item>
+    <item name="item_text" type="id">item_text</item>
+    <item name="item_type" type="id">item_type</item>
+</resources>

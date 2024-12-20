@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".OfflineBookingsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5">
+
+        <!-- White Square -->
+        <RelativeLayout
+            android:id="@+id/red_square"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#FFFFFF">
+
+            <!-- Text: Hatid-Sundo -->
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Offline"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/button_red_back_background"
+                android:contentDescription="Back Button"
+                android:padding="12dp"
+                android:src="@drawable/ic_white_back_arrow" />
+
+            <!-- Square Button with Rounded Corners and Toggle Circle -->
+            <Switch
+                android:id="@+id/toggle_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="25dp"
+                android:checked="false"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:thumb="@drawable/ic_thumb"
+                android:track="@drawable/bg_track"
+                tools:ignore="UseSwitchCompatOrMaterialXml">
+            </Switch>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
