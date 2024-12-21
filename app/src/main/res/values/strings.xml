@@ -9,7 +9,7 @@
     <string name="fairview_terraces">Fairview Terraces</string>
     <string name="_4">4</string>
     <string name="drop_off">Drop Off</string>
-    <string name="p50_00">P50.00</string>
+    <string name="p50_00">P50</string>
     <string name="confirm_booking">Confirm Booking</string>
     <string name="notes">Notes</string>
     <string name="passenger">Passenger</string>
@@ -44,4 +44,6 @@
     <string name="mode">Mode</string>
     <string name="padala">Padala</string>
     <string name="hatid_sundo">Hatid-Sundo</string>
+    <string name="reject">Reject</string>
+    <string name="reject_booking">Reject Booking</string>
 </resources>

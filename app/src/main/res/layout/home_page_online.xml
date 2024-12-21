@@ -128,7 +128,7 @@
             android:layout_below="@id/greeting_section"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="190dp"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="68dp"
             android:background="@drawable/view_background"
             android:text="@string/view_all"
             android:textAllCaps="false"
@@ -138,13 +138,16 @@
 
         <!--        Bookings-->
         <LinearLayout
+            android:id="@+id/front_booking"
             android:layout_width="300dp"
-            android:layout_height="310dp"
-            android:layout_marginTop="360dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="320dp"
             android:background="@drawable/bookings_background"
             android:orientation="vertical"
             android:padding="1dp"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -236,17 +239,67 @@
                 android:layout_marginTop="10dp"
                 tools:ignore="DuplicateIds" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="100dp"
-                android:layout_height="33dp"
-                android:layout_marginStart="190dp"
-                android:layout_marginTop="6dp"
-                android:background="@drawable/red_stroke_white_bg"
-                android:text="@string/view"
-                android:textAllCaps="false"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mode"
+                android:textColor="#000000"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hatid_sundo"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                tools:ignore="TouchTargetSizeCheck"
                 android:textColor="#000000"/>
+
+            <!--    Divider for drop off-->
+            <View
+                android:id="@+id/divider_line_dropoff"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#D9D9D9"
+                android:layout_marginTop="10dp"
+                tools:ignore="DuplicateIds" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/view"
+                    android:layout_width="100dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/red_stroke_white_bg"
+                    android:text="@string/view"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:textColor="#000000"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="100dp"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginStart="75dp"
+                    android:background="@drawable/red_background_black_stroke"
+                    android:text="@string/reject"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+
+
         </LinearLayout>
 
     </RelativeLayout>

@@ -18,11 +18,11 @@ public class OfflineBookingsActivity extends AppCompatActivity {
         Switch toggleButton = findViewById(R.id.toggle_button);
 
         // Set the initial state of the Switch (checked=true)
-        toggleButton.setChecked(true);
+        toggleButton.setChecked(false);
 
         // Set an OnCheckedChangeListener to listen for state changes
         toggleButton.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (!isChecked) {
+            if (isChecked) {
 
                 runOnUiThread(() -> {
                     // If unchecked, navigate to HomePageOffline

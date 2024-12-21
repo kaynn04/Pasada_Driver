@@ -38,7 +38,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerInParent="true"
                 android:layout_marginStart="16dp"
-                android:background="@drawable/button_red_back_background"
+                android:background="@drawable/button_circle_redbg"
                 android:contentDescription="@string/back_button"
                 android:padding="12dp"
                 android:src="@drawable/ic_white_back_arrow"
@@ -78,124 +78,142 @@
                 android:textSize="14sp"
                 android:background="#8C1C13"/>
 
-            <RelativeLayout
-                android:id="@+id/padala_item_layout"
+            <LinearLayout
+                android:id="@+id/padala_booking_layout"
                 android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:background="#D9D9D9"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
                 android:clickable="true"
                 android:focusable="true">
 
-                <ImageView
-                    android:id="@+id/image_customer"
-                    android:layout_width="80dp"
-                    android:layout_height="95dp"
-                    android:layout_margin="10dp"
-                    android:contentDescription="@string/image_customer"
-                    android:src="@drawable/img_customer"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:background="#D9D9D9">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                    <ImageView
+                        android:id="@+id/image_customer"
+                        android:layout_width="80dp"
+                        android:layout_height="95dp"
+                        android:layout_margin="10dp"
+                        android:contentDescription="@string/image_customer"
+                        android:src="@drawable/img_customer"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toEndOf="@id/image_customer"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kyan_oclares"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/p50_00"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_toEndOf="@id/image_customer"
-                    android:layout_marginTop="20dp">
+                    android:text="@string/pick_up"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/kyan_oclares"
-                        android:textColor="#000000"
-                        android:textStyle="bold"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/p50_00"
-                        android:textColor="#000000"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-            </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bukluran_court"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/pick_up"
-                android:textColor="#000000"
-                android:padding="5dp"
-                android:layout_marginTop="5dp"/>
+                <!--    Divider for Pick up-->
+                <View
+                    android:id="@+id/divider_line_pickup"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#D9D9D9"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="DuplicateIds" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/bukluran_court"
-                android:padding="5dp"
-                android:layout_marginTop="5dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
+                <!--            Text: Drop off-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/drop_off"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"/>
 
-            <!--    Divider for drop off-->
-            <View
-                android:id="@+id/divider_line_dropoff"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#D9D9D9"
-                android:layout_marginTop="10dp"
-                tools:ignore="DuplicateIds" />
+                <!--            Text: Bukluran-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bukluran_court"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/drop_off"
-                android:textColor="#000000"
-                android:padding="5dp"
-                android:layout_marginTop="5dp"/>
+                <!--    Divider for drop off-->
+                <View
+                    android:id="@+id/divider_line_dropoff"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#b2b2b2"
+                    tools:ignore="DuplicateIds" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/bukluran_court"
-                android:padding="5dp"
-                android:layout_marginTop="5dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
+                <!--            Text: Mode-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mode"
+                    android:textColor="#000000"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"/>
 
-            <!--    Divider for drop off-->
-            <View
-                android:id="@+id/divider_line_dropoff"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="10dp"
-                android:background="#b2b2b2"
-                tools:ignore="DuplicateIds" />
+                <!--            Text: Padala-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/padala"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/mode"
-                android:textColor="#000000"
-                android:padding="5dp"
-                android:layout_marginTop="5dp"/>
+                <!--    Divider for Mode-->
+                <View
+                    android:id="@+id/divider_line_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#8C1C13"
+                    tools:ignore="DuplicateIds" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/padala"
-                android:padding="5dp"
-                android:layout_marginTop="5dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
-
-            <!--    Divider for drop off-->
-            <View
-                android:id="@+id/divider_line_dropoff"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_marginTop="10dp"
-                android:background="#8C1C13"
-                tools:ignore="DuplicateIds" />
+        <LinearLayout
+            android:id="@+id/hatid_sundo_booking_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
 
             <!--            Second Passenger (Hatid-Sundo) -->
             <RelativeLayout
@@ -254,7 +272,7 @@
 
             <!--    Divider for drop off-->
             <View
-                android:id="@+id/divider_line_dropoff"
+                android:id="@+id/divider_line_pickup_hatid_sundo"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:background="#D9D9D9"
@@ -281,7 +299,7 @@
 
             <!--    Divider for drop off-->
             <View
-                android:id="@+id/divider_line_dropoff"
+                android:id="@+id/divider_line_dropoff_hatid_sundo"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginTop="10dp"
@@ -308,7 +326,7 @@
 
             <!--    Divider for drop off-->
             <View
-                android:id="@+id/divider_line_dropoff"
+                android:id="@+id/divider_line_mode_hatid_sundo"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_marginTop="10dp"
@@ -316,10 +334,6 @@
                 tools:ignore="DuplicateIds" />
         </LinearLayout>
 
-
-
+        </LinearLayout>
     </RelativeLayout>
-
-
-
 </ScrollView>

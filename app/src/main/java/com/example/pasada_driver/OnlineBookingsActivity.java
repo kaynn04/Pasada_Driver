@@ -4,7 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -50,13 +50,28 @@ public class OnlineBookingsActivity extends AppCompatActivity {
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         });
 
-        // Find the RelativeLayout by ID
-        RelativeLayout padalaItemLayout = findViewById(R.id.padala_item_layout);
+        // for padala
+        // Find the LinearLayout by ID
+        LinearLayout padalaBookingLayout = findViewById(R.id.padala_booking_layout);
 
         // Set an OnClickListener for the RelativeLayout
-        padalaItemLayout.setOnClickListener(v -> {
+        padalaBookingLayout.setOnClickListener(v -> {
             // Navigate to PadalaDetails Activity
             Intent intent = new Intent(OnlineBookingsActivity.this, PadalaDetails.class);
+            startActivity(intent);
+
+            // Apply smooth transition
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        });
+
+        // for hatid-sundo
+        // Find the LinearLayout by ID
+        LinearLayout hatidSundoBookingLayout = findViewById(R.id.hatid_sundo_booking_layout);
+
+        // Set an OnClickListener for the LinearLayout
+        hatidSundoBookingLayout.setOnClickListener(v -> {
+            // Navigate to HatidSundodDetails Activity
+            Intent intent = new Intent(OnlineBookingsActivity.this, HatidSundoDetails.class);
             startActivity(intent);
 
             // Apply smooth transition

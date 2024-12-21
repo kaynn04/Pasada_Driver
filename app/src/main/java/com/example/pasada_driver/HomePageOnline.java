@@ -2,6 +2,7 @@ package com.example.pasada_driver;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,6 +42,33 @@ public class HomePageOnline extends AppCompatActivity {
         viewAllButton.setOnClickListener(v -> {
             // Navigate to the OnlineBookingsActivity
             Intent intent = new Intent(HomePageOnline.this, OnlineBookingsActivity.class);
+            startActivity(intent);
+
+            // Apply smooth transition
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        });
+
+        // Find the button by ID
+        AppCompatButton viewButton = findViewById(R.id.view);
+
+        // Set an OnClickListener for the button
+        viewButton.setOnClickListener(v -> {
+            // Navigate to the OnlineBookingsActivity
+            Intent intent = new Intent(HomePageOnline.this, HatidSundoDetails.class);
+            startActivity(intent);
+
+            // Apply smooth transition
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        });
+
+        // for hatid-sundo
+        // Find the LinearLayout by ID
+        LinearLayout frontBookingLayout = findViewById(R.id.front_booking);
+
+        // Set an OnClickListener for the LinearLayout
+        frontBookingLayout.setOnClickListener(v -> {
+            // Navigate to HatidSundodDetails Activity
+            Intent intent = new Intent(HomePageOnline.this, HatidSundoDetails.class);
             startActivity(intent);
 
             // Apply smooth transition

@@ -30,6 +30,8 @@
         <activity android:name=".OnlineBookingsActivity"/>
         <activity android:name=".PadalaDetails"/>
         <activity android:name=".HatidSundoDetails"/>
+        <activity android:name=".HatidSundoConfirmedBooking"/>
+        <activity android:name=".PadalaConfirmedBooking"/>
 
 
 
