@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Pasada_driver"
         tools:targetApi="31">
         <activity
-            android:name=".HomePageOffline"
+            android:name=".LoadingMain"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoadingMain"/>
+        <activity android:name=".HomePageOffline"/>
         <activity android:name=".HomePageOnline"/>
         <activity android:name=".WelcomePage"/>
         <activity android:name=".LoginPage"/>

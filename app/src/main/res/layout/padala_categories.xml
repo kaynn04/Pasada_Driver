@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- Red Square -->
+    <RelativeLayout
+        android:id="@+id/red_square"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#8C1C13">
+
+        <!-- Text: Hatid-Sundo -->
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Padala"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/button_back_background"
+            android:contentDescription="Back Button"
+            android:src="@drawable/ic_back_arrow"/>
+    </RelativeLayout>
+
+    <!--    Text: Categories-->
+    <LinearLayout
+        android:id="@+id/details_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/red_square">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:paddingStart="25dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/clickable_item"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_below="@id/details_section"
+        android:layout_marginTop="20dp">
+
+        <!--        Documents-->
+        <RelativeLayout
+            android:id="@+id/document_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/clickable_gray_background"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:id="@+id/document_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Documents"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/first_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0.1 - 0.3kg)"
+                android:layout_toEndOf="@id/document_text"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:textSize="12sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+        <!--        Electronics-->
+        <RelativeLayout
+            android:id="@+id/electronics_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/clickable_gray_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/electronics_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Electronics"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/second_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0.2 - 5kg)"
+                android:layout_toEndOf="@id/electronics_text"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:textSize="12sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+        <!--        Clothing-->
+        <RelativeLayout
+            android:id="@+id/clothing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/clickable_gray_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/clothing_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Clothing"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/third_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0.1 - 3kg)"
+                android:layout_toEndOf="@id/clothing_text"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:textSize="12sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+        <!--        Toys-->
+        <RelativeLayout
+            android:id="@+id/toys_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/clickable_gray_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/toys_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Toys"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/fourth_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0.1 - 3kg)"
+                android:layout_toEndOf="@id/toys_text"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:textSize="12sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+        <!--        Household Items-->
+        <RelativeLayout
+            android:id="@+id/household_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/clickable_gray_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/household_text"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Household Items"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/fifth_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0.2 - 5kg)"
+                android:layout_toEndOf="@id/household_text"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:textSize="12sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+        <!--        Food-->
+        <RelativeLayout
+            android:id="@+id/food_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/clickable_gray_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/food_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/sixth_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0.5 - 10kg)"
+                android:layout_toEndOf="@id/food_text"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:textSize="12sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+        <!--        Gifts-->
+        <RelativeLayout
+            android:id="@+id/gifts_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/clickable_gray_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/gifts_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Gifts"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/seventh_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(0.1 - 5kg)"
+                android:layout_toEndOf="@id/gifts_text"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:textSize="12sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+        <!--        Other-->
+        <RelativeLayout
+            android:id="@+id/other_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/clickable_gray_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/other_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Other"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="25dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@id/details_section"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="522dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button_background"
+        android:text="Confirm"
+        android:textColor="#8C1C13"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

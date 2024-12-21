@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="#8C1C13"
     android:gravity="center"
-    android:padding="16dp"
+    android:padding="23dp"
     tools:context=".WelcomePage">
 
     <!-- App Title -->
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Pasada"
-        android:textSize="28sp"
+        android:textSize="45sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold"/>
 

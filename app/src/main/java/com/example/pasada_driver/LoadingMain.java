@@ -1,5 +1,6 @@
 package com.example.pasada_driver;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ProgressBar;
@@ -39,6 +40,19 @@ public class LoadingMain extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
+
+                // After loading is complete, start the WelcomePage activity
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent intent = new Intent(LoadingMain.this, WelcomePage.class);
+                        startActivity(intent);
+                        finish();  // Close the current activity (loading screen)
+
+                        // Apply smooth transition
+                        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+                    }
+                });
             }
         }).start();
     }
