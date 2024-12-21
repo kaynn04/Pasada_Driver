@@ -25,15 +25,14 @@
             <TextView
                 android:id="@+id/backButton"
                 android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:text="&lt;"
+                android:layout_height="match_parent"
+                android:text="@string/lt"
                 android:textSize="30sp"
                 android:textStyle="bold"
-                android:layout_gravity="center_vertical"
+                android:gravity="center"
                 android:clickable="true"
                 android:focusable="true"
                 android:padding="8dp"
-                android:layout_marginLeft="10dp"
                 android:textColor="@color/black"/>
         </LinearLayout>
 
@@ -41,7 +40,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="@string/login"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginTop="50dp"
@@ -52,7 +51,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email/Username"
+            android:text="@string/email_username"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:layout_marginTop="130dp"
@@ -63,14 +62,18 @@
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:hint="Enter your email or username"
-            android:padding="10dp"/>
+            android:autofillHints=""
+            android:hint="@string/enter_your_email_or_username"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <!-- Password -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Password"
+            android:text="@string/password"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:layout_marginTop="10dp"
@@ -81,14 +84,17 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:autofillHints=""
+            android:hint="@string/enter_your_password"
             android:inputType="textPassword"
-            android:hint="Enter your password"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:textColorHint="#546E7A"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sure about the information?"
+            android:text="@string/sure_about_the_information"
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"
             android:layout_marginTop="155dp"
@@ -100,14 +106,15 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:background="@drawable/button_background"
-            android:text="Confirm"
+            android:text="@string/confirm"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_gravity="center"
             android:paddingLeft="32dp"
             android:paddingRight="32dp"
-            app:backgroundTint="@null" />  <!-- Ensuring no background tint is applied -->
+            app:backgroundTint="@null"
+            tools:ignore="VisualLintButtonSize" />  <!-- Ensuring no background tint is applied -->
 
 
 

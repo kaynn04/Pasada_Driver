@@ -16,10 +16,10 @@
 
         <!-- Text: Hatid-Sundo -->
         <TextView
-            android:id="@+id/title_text"
+            android:id="@+id/text_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Details"
+            android:text="@string/details"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -30,13 +30,14 @@
             android:id="@+id/back_button"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
             android:background="@drawable/button_back_background"
-            android:contentDescription="Back Button"
+            android:contentDescription="@string/back_button"
+            android:padding="8dp"
             android:src="@drawable/ic_back_arrow"
-            android:padding="8dp"/>
+            tools:ignore="RedundantDescriptionCheck" />
     </RelativeLayout>
 
     <!--    Header for picture, name, fare price-->
@@ -53,32 +54,37 @@
             android:layout_height="90dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
+            android:background="@drawable/square_profile_placeholder"
+            android:contentDescription="@string/todo"
             android:scaleType="centerCrop"
-            android:background="@drawable/square_profile_placeholder"/>
-        <!--        android:src="@drawable/ic_profile_square_placeholder"/>-->
+            tools:ignore="ImageContrastCheck" />
+    <!--    android:src="@drawable/ic_profile_square_placeholder"/>-->
 
         <TextView
+            android:id="@+id/customer_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/profile_picture"
-            android:text="Kyan Oclares"
+            android:text="@string/kyan_oclares"
             android:layout_marginStart="25dp"
             android:textStyle="bold"
             android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            tools:ignore="RelativeOverlap" />
 
         <TextView
             android:id="@+id/fare_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
             android:layout_marginTop="45dp"
-            android:layout_marginEnd="25dp"
-            android:text="P50.00"
-            android:textSize="27dp"
+            android:text="@string/p50_00"
+            android:textColor="#000000"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="#000000"/>
+            tools:ignore="TextSizeCheck"
+            android:layout_marginStart="52dp"
+            android:layout_toEndOf="@id/customer_name"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -87,7 +93,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="40dp"
-            android:text="Trip Fare" />
+            android:text="@string/trip_fare" />
 
     </RelativeLayout>
 
@@ -103,25 +109,26 @@
     <RelativeLayout
         android:id="@+id/pick_up"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/divider_line_trip">
 
         <TextView
             android:id="@+id/pick_up_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pick Up"
+            android:text="@string/pick_up"
             android:layout_margin="10dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bukluran Court"
             android:layout_below="@id/pick_up_text"
             android:layout_marginStart="10dp"
-            android:textSize="25dp"
+            android:text="@string/bukluran_court"
             android:textColor="#000000"
-            android:textStyle="bold"/>
+            android:textSize="23sp"
+            android:textStyle="bold"
+            tools:ignore="TextSizeCheck" />
     </RelativeLayout>
 
     <!--    Divider for pickup-->
@@ -137,24 +144,25 @@
         android:id="@+id/drop_off"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_below="@id/divider_line_pickup">
+        android:layout_below="@id/divider_line_pickup"
+        tools:ignore="TextSizeCheck">
 
         <TextView
             android:id="@+id/drop_off_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Drop Off"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            android:text="@string/drop_off" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fairview Terraces"
             android:layout_below="@id/drop_off_text"
             android:layout_marginStart="10dp"
-            android:textSize="25dp"
+            android:text="@string/fairview_terraces"
             android:textColor="#000000"
-            android:textStyle="bold"/>
+            android:textSize="23sp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <!--    Divider for drop off-->
@@ -169,25 +177,28 @@
     <RelativeLayout
         android:id="@+id/passenger"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/divider_line_dropoff">
 
         <TextView
             android:id="@+id/passenger_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Passenger"
-            android:layout_margin="10dp"/>
+            android:text="@string/passenger"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4"
+            android:text="@string/_4"
             android:layout_below="@id/passenger_text"
             android:layout_marginStart="10dp"
-            android:textSize="25dp"
+            android:textSize="23sp"
             android:textColor="#000000"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"/>
     </RelativeLayout>
 
     <!--    Divider for Passenger-->
@@ -209,7 +220,7 @@
             android:id="@+id/notes_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Notes"
+            android:text="@string/notes"
             android:layout_margin="10dp"/>
 
         <TextView
@@ -217,9 +228,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/notes_text"
             android:layout_marginStart="10dp"
-            android:text="Enter note for driver"
+            android:text="@string/enter_note_for_driver"
             android:textColor="#000000"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textStyle="normal"
             tools:ignore="TextSizeCheck" />
     </RelativeLayout>
@@ -233,11 +244,12 @@
         android:layout_marginTop="650dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/button_background_redbg"
-        android:text="Confirm Booking"
+        android:text="@string/confirm_booking"
         android:textColor="#FFFFFF"
         android:textSize="17sp"
         android:textStyle="bold"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false"
+        tools:ignore="VisualLintButtonSize" />
 
     <!--    Divider for Notes-->
     <View

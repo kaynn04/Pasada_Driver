@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
@@ -28,7 +26,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
                 android:background="?attr/selectableItemBackground"
-                android:contentDescription="Menu"
+                android:contentDescription="@string/menu"
                 android:src="@drawable/ic_burger_menu"/>
 
             <!--        Home Text-->
@@ -36,7 +34,7 @@
                 android:id="@+id/home_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Offline"
+                android:text="@string/offline"
                 android:textColor="#FFFFFF"
                 android:gravity="center"
                 android:layout_marginTop="18dp"
@@ -55,7 +53,8 @@
                 android:thumb="@drawable/ic_thumb"
                 android:scaleX="2"
                 android:scaleY="2"
-                android:checked="false">
+                android:checked="false"
+                tools:ignore="UseSwitchCompatOrMaterialXml">
             </Switch>
 
 
@@ -78,6 +77,7 @@
                 android:src="@drawable/img_driver"
                 android:layout_centerVertical="true"
                 android:layout_margin="10dp"
+                android:contentDescription="@string/image_driver"
                 />
             <!--        Good Morning, Afternoon, Evening-->
             <LinearLayout
@@ -94,7 +94,7 @@
                     android:id="@+id/earned_money"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="P200"
+                    android:text="@string/p200"
                     android:textStyle="bold"
                     android:textSize="30sp"
                     android:textColor="#000000" />
@@ -103,7 +103,7 @@
                     android:id="@+id/earned_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Earned"
+                    android:text="@string/earned"
                     android:textStyle="normal"
                     android:textSize="15sp"
                     android:textColor="#000000"/>
@@ -116,19 +116,15 @@
             android:layout_width="match_parent"
             android:layout_height="580dp"
             android:layout_marginTop="120dp">
-            
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/map"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    tools:context="com.example.XYZ.googlemaps.MapsActivity"
-                    tools:layout="@android:layout/simple_gallery_item" />
-                <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
-            </FrameLayout>
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.example.XYZ.googlemaps.MapsActivity"
+                tools:layout="@android:layout/simple_gallery_item" />
+            <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+
         </RelativeLayout>
 
         <TextView
@@ -136,7 +132,7 @@
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
             android:background="@drawable/home_offline_background"
-            android:text="You are Offline!"
+            android:text="@string/you_are_offline"
             android:textColor="#FFFFFF"
             android:gravity="center"
             android:textSize="20sp"
@@ -152,7 +148,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="#FFFFFF"
-        android:fitsSystemWindows="true">
+        android:fitsSystemWindows="true"
+        tools:ignore="VisualLintBounds">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -164,7 +161,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="PASADA"
+                android:text="@string/pasada"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="#000000"
@@ -176,7 +173,7 @@
                 android:id="@+id/user_profile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Profile"
+                android:text="@string/profile"
                 android:textSize="18sp"
                 android:paddingVertical="8dp" />
 
@@ -184,7 +181,7 @@
                 android:id="@+id/saved_places"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Saved Places"
+                android:text="@string/saved_places"
                 android:textSize="18sp"
                 android:paddingVertical="8dp" />
 
@@ -192,7 +189,7 @@
                 android:id="@+id/metric"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Metric"
+                android:text="@string/metric"
                 android:textSize="18sp"
                 android:paddingVertical="8dp" />
 
@@ -200,7 +197,7 @@
                 android:id="@+id/history"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="History"
+                android:text="@string/history"
                 android:textSize="18sp"
                 android:paddingVertical="8dp" />
 
@@ -208,7 +205,7 @@
                 android:id="@+id/settings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Settings"
+                android:text="@string/settings"
                 android:textSize="18sp"
                 android:paddingVertical="8dp" />
 
@@ -216,7 +213,7 @@
                 android:id="@+id/logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Log Out"
+                android:text="@string/log_out"
                 android:textSize="18sp"
                 android:paddingVertical="8dp" />
         </LinearLayout>

@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#F5F5F5">
 
         <!-- White Square -->
@@ -21,11 +21,11 @@
 
             <!-- Text: Hatid-Sundo -->
             <TextView
-                android:id="@+id/title_text"
+                android:id="@+id/text_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Online"
+                android:text="@string/online"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -36,13 +36,13 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_alignParentStart="true"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
                 android:layout_marginStart="16dp"
                 android:background="@drawable/button_red_back_background"
-                android:contentDescription="Back Button"
+                android:contentDescription="@string/back_button"
                 android:padding="12dp"
-                android:src="@drawable/ic_white_back_arrow" />
+                android:src="@drawable/ic_white_back_arrow"
+                tools:ignore="RedundantDescriptionCheck" />
 
             <!-- Square Button with Rounded Corners and Toggle Circle -->
             <Switch
@@ -56,7 +56,8 @@
                 android:scaleX="2"
                 android:scaleY="2"
                 android:thumb="@drawable/ic_thumb"
-                android:track="@drawable/bg_track" />
+                android:track="@drawable/bg_track"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
 
         </RelativeLayout>
 
@@ -71,7 +72,7 @@
                 android:layout_height="33dp"
                 android:text="@string/you_have_3_new_requests"
                 android:paddingTop="5dp"
-                android:paddingStart="10dp"
+                android:padding="5dp"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:textSize="14sp"
@@ -90,6 +91,7 @@
                     android:layout_width="80dp"
                     android:layout_height="95dp"
                     android:layout_margin="10dp"
+                    android:contentDescription="@string/image_customer"
                     android:src="@drawable/img_customer"/>
 
                 <LinearLayout
@@ -102,13 +104,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kyan Oclares"
+                        android:text="@string/kyan_oclares"
                         android:textColor="#000000"
                         android:textStyle="bold"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="P50.00"
+                        android:text="@string/p50_00"
                         android:textColor="#000000"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -117,16 +119,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pick Up"
+                android:text="@string/pick_up"
                 android:textColor="#000000"
-                android:paddingStart="10dp"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bukluran Court"
-                android:paddingStart="10dp"
+                android:text="@string/bukluran_court"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -144,16 +146,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Drop Off"
+                android:text="@string/drop_off"
                 android:textColor="#000000"
-                android:paddingStart="10dp"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bukluran Court"
-                android:paddingStart="10dp"
+                android:text="@string/bukluran_court"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -171,16 +173,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mode"
+                android:text="@string/mode"
                 android:textColor="#000000"
-                android:paddingStart="10dp"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Padala"
-                android:paddingStart="10dp"
+                android:text="@string/padala"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -192,10 +194,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_marginTop="10dp"
-                android:background="#b2b2b2"
+                android:background="#8C1C13"
                 tools:ignore="DuplicateIds" />
 
-<!--            Second Passenger-->
+            <!--            Second Passenger (Hatid-Sundo) -->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
@@ -207,7 +209,8 @@
                     android:layout_height="95dp"
                     android:layout_margin="10dp"
                     android:src="@drawable/img_customer"
-                    tools:ignore="DuplicateIds" />
+                    tools:ignore="DuplicateIds"
+                    android:contentDescription="@string/image_customer"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -219,13 +222,13 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kyan Oclares"
+                        android:text="@string/kyan_oclares"
                         android:textColor="#000000"
                         android:textStyle="bold"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="P50.00"
+                        android:text="@string/p50_00"
                         android:textColor="#000000"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -234,16 +237,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Pick Up"
+                android:text="@string/pick_up"
                 android:textColor="#000000"
-                android:paddingStart="10dp"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bukluran Court"
-                android:paddingStart="10dp"
+                android:text="@string/bukluran_court"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -261,16 +264,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Drop Off"
+                android:text="@string/drop_off"
                 android:textColor="#000000"
-                android:paddingStart="10dp"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bukluran Court"
-                android:paddingStart="10dp"
+                android:text="@string/bukluran_court"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -288,16 +291,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mode"
+                android:text="@string/mode"
                 android:textColor="#000000"
-                android:paddingStart="10dp"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hatid-Sundo"
-                android:paddingStart="10dp"
+                android:text="@string/hatid_sundo"
+                android:padding="5dp"
                 android:layout_marginTop="5dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -309,123 +312,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:layout_marginTop="10dp"
-                android:background="#b2b2b2"
-                tools:ignore="DuplicateIds" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:background="#D9D9D9">
-
-                <ImageView
-                    android:id="@+id/image_customer"
-                    android:layout_width="80dp"
-                    android:layout_height="95dp"
-                    android:layout_margin="10dp"
-                    android:src="@drawable/img_customer"
-                    tools:ignore="DuplicateIds" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_toEndOf="@id/image_customer"
-                    android:layout_marginTop="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Kyan Oclares"
-                        android:textColor="#000000"
-                        android:textStyle="bold"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="P50.00"
-                        android:textColor="#000000"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-            </RelativeLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Pick Up"
-                android:textColor="#000000"
-                android:paddingStart="10dp"
-                android:layout_marginTop="5dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bukluran Court"
-                android:paddingStart="10dp"
-                android:layout_marginTop="5dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
-
-            <!--    Divider for drop off-->
-            <View
-                android:id="@+id/divider_line_dropoff"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#D9D9D9"
-                android:layout_marginTop="10dp"
-                tools:ignore="DuplicateIds" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Drop Off"
-                android:textColor="#000000"
-                android:paddingStart="10dp"
-                android:layout_marginTop="5dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Bukluran Court"
-                android:paddingStart="10dp"
-                android:layout_marginTop="5dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
-
-            <!--    Divider for drop off-->
-            <View
-                android:id="@+id/divider_line_dropoff"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="10dp"
-                android:background="#b2b2b2"
-                tools:ignore="DuplicateIds" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Mode"
-                android:textColor="#000000"
-                android:paddingStart="10dp"
-                android:layout_marginTop="5dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Padala"
-                android:paddingStart="10dp"
-                android:layout_marginTop="5dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
-
-            <!--    Divider for drop off-->
-            <View
-                android:id="@+id/divider_line_dropoff"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_marginTop="10dp"
-                android:background="#b2b2b2"
+                android:background="#8C1C13"
                 tools:ignore="DuplicateIds" />
         </LinearLayout>
 

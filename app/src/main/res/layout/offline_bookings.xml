@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#F5F5F5">
 
         <!-- White Square -->
@@ -21,14 +21,15 @@
 
             <!-- Text: Hatid-Sundo -->
             <TextView
-                android:id="@+id/title_text"
+                android:id="@+id/text_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Offline"
+                android:text="@string/offline"
                 android:textColor="#000000"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
 
             <!-- Back Button -->
             <ImageButton
@@ -36,13 +37,13 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_alignParentStart="true"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
                 android:layout_marginStart="16dp"
                 android:background="@drawable/button_red_back_background"
-                android:contentDescription="Back Button"
+                android:contentDescription="@string/back_button"
                 android:padding="12dp"
-                android:src="@drawable/ic_white_back_arrow" />
+                android:src="@drawable/ic_white_back_arrow"
+                tools:ignore="RedundantDescriptionCheck" />
 
             <!-- Square Button with Rounded Corners and Toggle Circle -->
             <Switch
